@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import 'react-bulma-components/dist/react-bulma-components.min.css';
+import {Section, Box } from 'react-bulma-components';
+import GaugeGraph from './components/GaugeGraph';
 import './App.css';
+
+const params = [
+  {
+      "Value": "B",
+      "ValueStyle": {
+          "Margin": 10,
+          "TextSize": 20
+      },
+      "HexStyle": {
+          "Margin": 10,
+          "TextSize": 20
+      },
+      "startColor": "red",
+      "endColor": "green",
+      "fillerColor": "#777722",
+      "endAngle": 120,
+      "startAngle": 0,
+      "width": 500,
+      "height": 500
+  }
+];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Section>
+          <Box>
+            <GaugeGraph data={params}/>
+          </Box>
+        </Section>
       </div>
     );
   }
