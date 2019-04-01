@@ -27,7 +27,7 @@ export default ChartComponent =>
       const currentContainerWidth = this.chartContainer.getBoundingClientRect().width;
 
       const currentContainerHeight = this.chartContainer.getBoundingClientRect().height;
-
+      console.log(currentContainerWidth + ":" +  currentContainerHeight, "resize")
       const shouldResize = containerWidth !== currentContainerWidth;
 
       if (shouldResize) {

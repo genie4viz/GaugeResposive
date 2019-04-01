@@ -6,19 +6,19 @@ import Gauge from './Gauge';
 class GaugeGraph extends Component {
   constructor(props){
     super(props);    
-    const {parentWidth, parentHeight, data} = this.props;
+    const {parentWidth, parentHeight, data} = this.props;    
     this.state = {
       data: data,
-      width: Math.max(parentWidth, 500),
-      height: 500
+      width: Math.max(parentWidth, 380),
+      height: Math.max(parentHeight, 380)
     };
   };  
   componentWillReceiveProps(nextProps){    
-    const {parentWidth, parentHeight, data} = nextProps;
+    const {parentWidth, parentHeight, data} = nextProps;    
     this.setState({
       data: data,
-      width: Math.max(parentWidth, 500),
-      height: 500
+      width: Math.max(parentWidth, 380),
+      height: Math.max(parentHeight, 380)
     }); 
   }
   
